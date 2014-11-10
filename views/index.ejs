@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tests</title>
+    <link rel='stylesheet' href='/css/base.css' />
+    <link rel='stylesheet' href='/css/index.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <ul id="navigator">
+            <li class="company_logo">Test Manager</li>
+            <li class="right"><a id="a_create_test" href="#/create_test">Create Test</a></li>
+            <li class="right"><a id="a_show_tests" href="#/show_tests">Show Tests</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="create_test_container">
+    <h2 id="form-header">Create a Question</h2>
+            <div>
+                <form id="form_test" name=“form_test”>
+                    <label id="label-test-type">What kind of question you would like to create?</label>
+                    <select id="test_selections">
+                        <option value=“HTML5”>HTML5</option>
+                        <option value=“JavaScript”>JavaScript</option>
+                        <option value=“CSS3”>CSS3</option>
+                    </select>
+                    <label id="label_question">Please enter your question here: </label>
+                    <input type=“text” name ="question" id=“question”>
+
+                    <label id="label_question_correct">Please enter correct answer here: </label>
+                    <input type=“text” name="correctAnswer" id=“correctAnswer”>
+
+                    <label id="label_question_wrong1">Please enter the first wrong answer here: </label>
+                    <input type=“text” name="wrongAnswer1" id=“wrongAnswer1”  >
+
+                    <label id="label_question_wrong2">Please enter the second wrong answer here: </label>
+                    <input type=“text” name="wrongAnswer2" id=“wrongAnswer2”>
+
+                    <label id="label_question_wrong3">Please enter the third wrong answer here: </label>
+                    <input type=“text” name="wrongAnswer3"id=“wrongAnswer3”>
+                </form>
+                <a id="a_create_server_tests" href="#" class="clickable">Create Question></a>
+                <div id="message_create_tester"></div>
+            </div>
+</div>
+<div id="show_tests_container">
+    <div id="main-page">
+        <h1>Welcome!</h1>
+        <P>This is a E-learning platform for students who are interested in learning different programming
+           languages such as HTML5, CSS3, JavaScript, and many more.</P>
+        <h2>Take Test</h2>
+        <ul id="test_names">
+            <li class="test"><a id="a_show_testsHTML5" href="#/show_testsHTML5">HTML5 Test</a></li>
+            <li class="test"><a id="a_show_testsJavaScript" href="#/show_testsJavaScript">JavaScript Test</a></li>
+            <li class="test"><a id="a_show_testsCSS3" href="#/show_testsCSS3">CSS3 Test</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>
