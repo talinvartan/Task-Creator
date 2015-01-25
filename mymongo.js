@@ -5,25 +5,27 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 console.log('Connection to MongoDB');
 
-var TestModel = mongoose.model('Test', {
-    testName: String,
-    question: String,
-    correctAnswer: String,
-    wrongAnswers: []
+var TaskModel = mongoose.model('Task', {
+    description: String,
+    status: Number,
+    priority: Number,
+    tags: String,
+    notes: String
 });
 
-var test1 = new TestModel({
-    testName: 'JavaScript',
-    question: 'Who is the creator of the JavaScript language ?',
-    correctAnswer: 'Brendan Eich',
-    wrongAnswer: ['Lary Pate', 'Mark Zuckerberg', 'Bill Gates']
+var task1 = new TaskModel({
+    description: 'Learn iOS 7 programming',
+    status: 1,
+    priority: 1,
+    tags: 'iWatch, iOS',
+    notes: 'Nov 14 hackathon'
 });
 
-
-test1.save(function (err, results) {
+/*task1.save(function (err, results) {
  console.log(err);
  console.log(results);
- });
+ });*/
+
 
 
 router.get('/', function (req, res) { // req.query.
@@ -68,6 +70,5 @@ router.delete('/:id', function (req, res) {
     }, 500);
 
 });
-
 
 module.exports = router;

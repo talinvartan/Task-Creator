@@ -11,6 +11,4 @@ function comms_server() {
             res.status(200).json(results);
         }
     });
-}/**
- * Created by talinvartan on 10/31/14.
- */
+}
